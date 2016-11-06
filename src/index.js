@@ -1,22 +1,40 @@
-import Item    from './models/item.js';
+import Checkout    from './models/checkout.js';
 import twoXone from './discounts/twoXone.js';
 import bulk    from './discounts/bulk.js';
-
-let articles = [];
-
-articles.push(new Item('VOUCHER', 'Cabify Voucher', 5.));
-articles.push(new Item('VOUCHER', 'Cabify Voucher', 5.));
-articles.push(new Item('TSHIRT', 'Cabify T-Shirt', 20.));
-articles.push(new Item('TSHIRT', 'Cabify T-Shirt', 20.));
-articles.push(new Item('TSHIRT', 'Cabify T-Shirt', 20.));
-articles.push(new Item('MUG', 'Cafify Coffee Mug', 7.5));
 
 let discounts = {
   'VOUCHER': twoXone,
   'TSHIRT': bulk
 };
 
-for(let disc in discounts) discounts[disc](articles.filter((item) => item.id === disc));
+let co1  = new Checkout(discounts);
+let co2 = new Checkout(discounts);
+let co3 = new Checkout(discounts);
+let co4 = new Checkout(discounts);
 
-console.log(articles);
-console.log(articles.reduce((previous, current) => {return {price: previous.price + current.price};}));
+co1.scan('VOUCHER');
+co1.scan('TSHIRT');
+co1.scan('MUG');
+
+co2.scan('VOUCHER');
+co2.scan('TSHIRT');
+co2.scan('VOUCHER');
+
+co3.scan('TSHIRT');
+co3.scan('TSHIRT');
+co3.scan('TSHIRT');
+co3.scan('VOUCHER');
+co3.scan('TSHIRT');
+
+co4.scan('VOUCHER');
+co4.scan('TSHIRT');
+co4.scan('VOUCHER');
+co4.scan('VOUCHER');
+co4.scan('MUG');
+co4.scan('TSHIRT');
+co4.scan('TSHIRT');
+
+co1.total();
+co2.total();
+co3.total();
+co4.total();
