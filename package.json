@@ -1,0 +1,17 @@
+{
+  "name": "code_exercise",
+  "version": "1.0.0",
+  "description": "Cabify code exercise",
+  "main": "./src/index.js",
+  "author": "Manuel Navarro <manuelnavarro1987@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.9.1",
+    "eslint-loader": "^1.6.1",
+    "webpack": "^1.13.3"
+  }
+}
