@@ -5,6 +5,11 @@
   "main": "./src/index.js",
   "author": "Manuel Navarro <manuelnavarro1987@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "test": "./node_modules/karma/bin/karma start",
+    "run-build": "node dist/bundle.js"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-loader": "^6.2.7",
