@@ -1,6 +1,6 @@
 export default class Item {
   constructor(id) {
-    this.id    = id;
+    this.id = id;
     
     switch(this.id) {
       case 'VOUCHER':

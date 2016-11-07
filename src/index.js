@@ -12,27 +12,27 @@ let co2 = new Checkout(discounts);
 let co3 = new Checkout(discounts);
 let co4 = new Checkout(discounts);
 
-co1.scan('VOUCHER');
-co1.scan('TSHIRT');
-co1.scan('MUG');
+co1.scan('VOUCHER')
+   .scan('TSHIRT')
+   .scan('MUG');
 
-co2.scan('VOUCHER');
-co2.scan('TSHIRT');
-co2.scan('VOUCHER');
+co2.scan('VOUCHER')
+   .scan('TSHIRT')
+   .scan('VOUCHER');
 
-co3.scan('TSHIRT');
-co3.scan('TSHIRT');
-co3.scan('TSHIRT');
-co3.scan('VOUCHER');
-co3.scan('TSHIRT');
+co3.scan('TSHIRT')
+   .scan('TSHIRT')
+   .scan('TSHIRT')
+   .scan('VOUCHER')
+   .scan('TSHIRT');
 
-co4.scan('VOUCHER');
-co4.scan('TSHIRT');
-co4.scan('VOUCHER');
-co4.scan('VOUCHER');
-co4.scan('MUG');
-co4.scan('TSHIRT');
-co4.scan('TSHIRT');
+co4.scan('VOUCHER')
+   .scan('TSHIRT')
+   .scan('VOUCHER')
+   .scan('VOUCHER')
+   .scan('MUG')
+   .scan('TSHIRT')
+   .scan('TSHIRT');
 
 co1.total();
 co2.total();
