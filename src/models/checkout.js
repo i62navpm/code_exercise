@@ -9,6 +9,8 @@ export default class Checkout {
 
   scan(id) {
     this.articles.push(new Item(id));
+    
+    return this;
   }
 
   applyDiscounts() {
