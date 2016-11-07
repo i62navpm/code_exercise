@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import Checkout from './checkout.js';
-import twoXone from '../discounts/twoXone.js';
-import bulk from '../discounts/bulk.js';
+import twoXone  from '../discounts/twoXone.js';
+import bulk     from '../discounts/bulk.js';
 
 describe("Testing Checkout object", () => {
   let co;

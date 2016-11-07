@@ -1,13 +1,13 @@
-import Checkout    from './models/checkout.js';
-import twoXone from './discounts/twoXone.js';
-import bulk    from './discounts/bulk.js';
+import Checkout from './models/checkout.js';
+import twoXone  from './discounts/twoXone.js';
+import bulk     from './discounts/bulk.js';
 
 let discounts = {
   'VOUCHER': twoXone,
   'TSHIRT': bulk
 };
 
-let co1  = new Checkout(discounts);
+let co1 = new Checkout(discounts);
 let co2 = new Checkout(discounts);
 let co3 = new Checkout(discounts);
 let co4 = new Checkout(discounts);

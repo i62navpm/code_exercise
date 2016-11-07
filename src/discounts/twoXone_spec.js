@@ -1,6 +1,6 @@
 /* eslint-disable */
 import twoXone from './twoXone.js';
-import Item from '../models/item.js'
+import Item    from '../models/item.js'
 
 describe("Testing twoXone function", function() {
 
